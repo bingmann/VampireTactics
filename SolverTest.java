@@ -50,7 +50,13 @@ public class SolverTest {
 	}
 
 	private boolean check(int[] solution, IGraph graph) {
-		for (int i = 0; i < solution.length; i++) {
+		int n = graph.numNodes();
+
+        for (int i=0; i<n; i++) {
+            graph.resetMarks(i);
+        }
+
+        for (int i = 0; i < solution.length; i++) {
 			graph.markNodeAsBitten(solution[i]);
 			propagateWarnings(solution[i], graph);
 		}
