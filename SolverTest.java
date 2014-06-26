@@ -50,9 +50,8 @@ public class SolverTest {
 	}
 
 	private boolean check(int[] solution, IGraph graph) {
-		int n = graph.numNodes();
 
-		for (int i=0; i<n; i++) {
+		for (int i = 0; i < graph.numNodes(); i++) {
 			graph.resetMarks(i);
 		}
 
